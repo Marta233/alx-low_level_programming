@@ -1,9 +1,12 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/*  main-Entry point */
 
-/* betty style doc for function main goes there */
+/**
+ * main - entry point, prints values of different data types
+ *
+ * Return: Always return 0
+ */
 int main(void)
 {
 	int n;
