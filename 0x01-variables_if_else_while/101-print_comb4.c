@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int n1, n2 n3;
+	int n1, n2, n3;
 
 	for (n1 = 0 ; n1 <= 6 ; n1++)
 	{
@@ -18,7 +18,7 @@ int main(void)
 			putchar((n1 % 10) + '0');
 			putchar((n2 % 10) + '0');
 			putchar((n3 % 10) + '0');
-			if (n1 == 6 && n2 == 8 && n3 ==9)
+			if (n1 == 6 && n2 == 8 && n3 == 9)
 				continue;
 			putchar(',');
 			putchar(' ');
