@@ -10,6 +10,6 @@ int main(void)
 	char n;
 
 	for (n = 0 ; n < 10 ; n++)
-		printf("the numver is", n);
+		printf("%d is the number\n", n);
 	return (0);
 }
