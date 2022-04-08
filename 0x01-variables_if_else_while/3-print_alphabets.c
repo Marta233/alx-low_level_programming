@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
@@ -13,7 +11,7 @@ int main(void)
 
 	for (Letter = 'a' ; Letter <= 'z' ; Letter++)
 		putchar(Letter);
-	for (Letter = 'A' ; Letter <= 'z' ; Letter++)
+	for (Letter = 'A' ; Letter <= 'Z' ; Letter++)
 		putchar(Letter);
 	putchar('\n');
 	return (0);
