@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - Prints "Programming is like building a multilingual
@@ -6,17 +6,14 @@
  *
  * Return: Always 0.
  */
-int main(void)
+int _putchar(void);
 {
-_putchar('H');
-_putchar('o');
-_putchar('l');
-_putchar('b');
-_putchar('e');
-_putchar('r');
-_putchar('t');
-_putchar('o');
-_putchar('n');
+char *c = "_putchar";
+while(*c)
+{
+_putchar(*c);
+*c++;
+}
 _putchar('\n');
 return (0);
 }
