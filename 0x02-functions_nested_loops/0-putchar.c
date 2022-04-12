@@ -1,19 +1,19 @@
 #include "main.h"
-
 /**
- * main - Prints "Programming is like building a multilingual
- *                puzzle, followed by a new line.
+ * main - Entry point
  *
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-char *c = "_putchar";
-while(*c)
-{
-_putchar(*c);
-*c++;
-}
-_putchar('\n');
-return (0);
+	char *sh = "_putchar";
+
+	while (*sh)
+	{
+		_putchar(*sh);
+		sh++;
+	}
+	_putchar('\n');
+
+	return (0);
 }
