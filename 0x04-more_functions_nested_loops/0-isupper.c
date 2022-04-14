@@ -7,10 +7,8 @@
  * Return: Always 0.
  */
 
-void positive_or_negative(int i)
+void positive_or_negative(int c)
 {
-	int c;
-
 	if (c >= 'A' && c <= 'Z')
 	{
 		return (1);
