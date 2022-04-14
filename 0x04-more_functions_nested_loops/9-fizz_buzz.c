@@ -1,35 +1,26 @@
+#include "main.h"
 #include <stdio.h>
-
 /**
- * main -  checks for checks for a digit (0 through 9).
+ * main - Fizz Buzz
+ * Description: Print the numbers from 1 to 100
  * Return: Always 0.
  */
+
 int main(void)
 {
-	int x;
+	int i;
 
-	for (x = 1; x <= 100; x++)
+	for (i = 1; i < 100; i++)
 	{
-		if (x % 3 == 0 || x % 5 == 0)
-		{
-			if (x % 3 == 0)
-			{
-				printf("Fizz");
-			}
-			if (x % 5 == 0)
-			{
-				printf("Buzz");
-			}
-		}
+		if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz ");
+		else if (i % 3 == 0)
+			printf("Fizz ");
+		else if (i % 5 == 0)
+			printf("Buzz ");
 		else
-		{
-			printf("%d", x);
-		}
-		if (x != 100)
-		{
-		putchar(' ');
-		}
+			printf("%d ", i);
 	}
-	putchar('\n');
+	printf("Buzz\n");
 	return (0);
-}	
+}
