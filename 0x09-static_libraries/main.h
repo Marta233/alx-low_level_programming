@@ -2,8 +2,8 @@
 #define MAIN_H
 
 /*
- * File: holberton.h
- * Auth: Brennan D Baraban
+ * File: main.h
+ * Auth: Marta
  * Desc: Header file containing the prototypes of all functions
  *       included in the static library libholberton.a.
  */
