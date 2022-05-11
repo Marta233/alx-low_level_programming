@@ -1,9 +1,4 @@
-/*
- * File: 0-print_name.c
- * Auth: Brennan D Baraban
- */
-
-#include "main.h"
+#include "function_pointers.h"
 
 /**
  * print_name - Prints a name.
