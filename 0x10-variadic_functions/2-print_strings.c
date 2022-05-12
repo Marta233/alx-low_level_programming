@@ -1,65 +1,37 @@
+#include <stdio.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
-#include <stdarg.h>
-#include <stdio.h>
+
 /**
- * print_strings - Entry Point
- * @separator: comma space
- * @n: number of elements
+ * print_strings - print strings
+ * @separator: string separator
+ * @n: number of args
  * Return: void
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	char *sep, *ptr;
-	unsigned int i;
 	va_list list;
 
-	if (separator == NULL || *separator == 0)
-		sep = "";
-	else
-		sep = (char *) separator;
-	va_start(list, n);
-
-	if (n > 0)
-		printf("%s", va_arg(list, char *));
-	for (i = 1; i < n; i++)
-	{
-		ptr = va_arg(list, char*);
-		if (ptr == NULL)
-			ptr = "(nil)";
-		printf("%s%s", sep, ptr);
-	}
-	printf("\n");
-	va_end(list);
-}#include "variadic_functions.h"
-#include <stdarg.h>
-#include <stdio.h>
-/**
- * print_strings - Entry Point
- * @separator: comma space
- * @n: number of elements
- * Return: void
- */
-void print_strings(const char *separator, const unsigned int n, ...)
-{
-	char *sep, *ptr;
 	unsigned int i;
-	va_list list;
 
-	if (separator == NULL || *separator == 0)
-		sep = "";
-	else
-		sep = (char *) separator;
 	va_start(list, n);
 
-	if (n > 0)
-		printf("%s", va_arg(list, char *));
-	for (i = 1; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
-		ptr = va_arg(list, char*);
-		if (ptr == NULL)
-			ptr = "(nil)";
-		printf("%s%s", sep, ptr);
+		char *c = va_arg(list, char *);
+
+		if (c)
+			printf("%s", c);
+		else
+			printf("(nil)");
+
+		if (i == n - 1)
+			break;
+
+		if (separator)
+			printf("%s", separator);
 	}
+
 	printf("\n");
 	va_end(list);
 }
