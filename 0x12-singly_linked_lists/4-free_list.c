@@ -1,49 +1,25 @@
 #include "lists.h"
-#include <string.h>
 
 /**
- * add_node_end - Adds a new node at the end
- *                of a list_t list.
- * @head: A pointer the head of the list_t list.
- * @str: The string to be added to the list_t list.
- *
- * Return: If the function fails - NULL.
- *         Otherwise - the address of the new element.
- */
-list_t *add_node_end(list_t **head, const char *str)
+ * free_list - frees a list_t list.
+ * @head: pointer to the list.
+ **/
+void free_list(list_t *head)
 {
-	char *dup;
-	int len;
-	list_t *new, *last;
+	list_t *actual_node;
+	list_t *next_node;
 
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
-		return (NULL);
-
-	dup = strdup(str);
-	if (str == NULL)
+	if (head)
 	{
-		free(new);
-		return (NULL);
+		actual_node = head;
+		next_node = head->next;
+		while (next_node)
+		{
+			free(actual_node->str);
+			free(actual_node);
+			actual_node = next_node;
+			next_node = next_node->next;
+		}
+		free(actual_node->str);
+		free(actual_node);
 	}
-
-	for (len = 0; str[len];)
-		len++;
-
-	new->str = dup;
-	new->len = len;
-	new->next = NULL;
-
-	if (*head == NULL)
-		*head = new;
-
-	else
-	{
-		last = *head;
-		while (last->next != NULL)
-			last = last->next;
-		last->next = new;
-	}
-
-	return (*head);
-}
