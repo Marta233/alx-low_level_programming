@@ -12,11 +12,11 @@
  * Return: If the function fails - NULL.
  *         Otherwise - the address of the new element.
  */
-listint_t *add_nodeint(listint_t **head, const int n);
+listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *temp;
 
-	temp = malloc(sizeof(listint))
+	temp = malloc(sizeof(listint));
 		if (new == NULL)
 			return (NULL);
 	temp -> n = n;
